@@ -5,10 +5,9 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const links = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "Blog", href: "#" },
+  { name: "Demo", href: "/" },
+  { name: "Features", href: "#" },
+  { name: "Pricing", href: "#" },
   { name: "Contact", href: "#" },
 ];
 
@@ -21,7 +20,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Image
-            src="/images/saasto-logo.svg"
+            src="/images/fi-icon.svg"
             alt="Saasto Logo"
             width={50}
             height={50}
@@ -36,7 +35,7 @@ const Header = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="hover:text-purple-800"
+              className="hover:text-green-800"
             >
               {link.name}
             </Link>
@@ -50,7 +49,7 @@ const Header = () => {
           </Link>
           <Link
             href="#"
-            className="px-3 py-1 bg-[#8976FD] text-white rounded hover:bg-purple-800"
+            className="px-3 py-1 bg-[#5BC17F] text-white rounded hover:bg-green-800"
           >
             Sign Up
           </Link>
@@ -73,7 +72,7 @@ const Header = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="hover:bg-purple-800"
+              className="hover:bg-green-800"
               onClick={() => setMenuOpen(false)}
             >
               {link.name}
@@ -82,14 +81,14 @@ const Header = () => {
           <div className="flex gap-4">
             <Link
               href="/login"
-              className="border-[#8976FD] px-3 py-1 rounded"
+              className="border-[#5BC17F] px-3 py-1 rounded"
               onClick={() => setMenuOpen(false)}
             >
               Login
             </Link>
             <Link
               href="/signup"
-              className="bg-[#8976FD] text-white px-3 py-1 rounded"
+              className="bg-[#5BC17F] text-white px-3 py-1 rounded"
               onClick={() => setMenuOpen(false)}
             >
               Sign Up

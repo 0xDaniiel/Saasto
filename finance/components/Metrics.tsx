@@ -20,7 +20,7 @@ const metrics = [
 
 const Metrics = () => {
   return (
-    <div className="py-12">
+    <div className="py-10">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {metrics.map((metric, index) => (
           <div

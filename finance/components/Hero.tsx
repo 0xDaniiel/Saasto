@@ -5,46 +5,59 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between gap-10 mt-20 md:mt-32 pt-10">
-      <section className="relative max-w-xl">
-        {/* Candle Image Positioned */}
-        <Image
-          src="/images/candle.svg"
-          alt="hero-img"
-          width={80}
-          height={80}
-          className="absolute -top-6 -left-6 w-16 h-16 md:w-20 md:h-20"
-        />
-
-        {/* Main Heading */}
-        <p className="text-4xl font-bold leading-tight pl-8 md:pl-12">
-          Committed To People Committed To
-          <span className="text-[#8976FD]"> The Future</span>
+    <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+      {/* Text Section */}
+      <section className="relative max-w-lg text-center md:text-left">
+        <p className="text-4xl font-bold leading-tight">
+          Manage Your Business
+          <span className="relative inline-block mx-1">
+            <span className="relative z-10 text-[#5BC17F] px-2">Finance</span>
+            <svg
+              className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
+              viewBox="0 0 150 70"
+              preserveAspectRatio="none"
+            >
+              <ellipse
+                cx="75"
+                cy="35"
+                rx="70"
+                ry="28"
+                stroke="#FFD375"
+                strokeWidth="4"
+                fill="none"
+                transform="rotate(-3 75 35)"
+              />
+            </svg>
+          </span>
+          Easily
         </p>
 
-        {/* Short aligned description */}
-        <p className="text-lg mt-4 text-gray-700 pl-8 md:pl-12">
+        <p className="text-lg mt-4 text-gray-700">
           We build digital solutions that serve people today and shape the
           future.
         </p>
 
-        {/* CTA Button */}
         <Link href="/#">
-          <Button className="bg-[#8976FD] px-5 py-3 mt-6 hover:bg-purple-800 cursor-pointer ml-8 md:ml-12">
+          <Button className="bg-[#5BC17F] px-5 py-3 mt-6 hover:bg-green-800 cursor-pointer">
             Get Started Now
           </Button>
         </Link>
       </section>
 
-      <section className="w-full max-w-sm md:max-w-full">
+      <section className="relative w-full max-w-[400px] md:max-w-[500px] mt-12 md:mt-0">
+        {/* Mobile Image */}
         <Image
-          src="/images/hero-img.svg"
-          alt="Illustration showing commitment to the future"
-          width={500}
-          height={500}
+          src="/images/mobile.svg"
+          alt="Mobile app interface illustration"
+          width={420}
+          height={420}
           priority
-          className="w-full h-auto"
+          className="w-full h-auto relative z-0"
         />
+
+        {/* Balance Image – moved further right (20%) */}
+
+        {/* Analytics Image – moved further left (20%) */}
       </section>
     </div>
   );
