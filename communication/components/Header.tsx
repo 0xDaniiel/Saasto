@@ -16,12 +16,12 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="p-4 border-b relative">
-      <div className="flex items-center justify-between relative">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b">
+      <div className="px-4 md:px-8 max-w-7xl mx-auto flex items-center justify-between relative py-4">
         {/* Logo */}
         <div className="flex items-center">
           <Image
-            src={"/images/saasto-logo.svg"}
+            src="/images/saasto-logo.svg"
             alt="Saasto Logo"
             width={50}
             height={50}
@@ -45,14 +45,11 @@ const Header = () => {
 
         {/* Auth Buttons (right) */}
         <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="/login"
-            className="px-3 py-1 border rounded hover:bg-gray-100"
-          >
+          <Link href="#" className="px-3 py-1 border rounded hover:bg-gray-100">
             Login
           </Link>
           <Link
-            href="/signup"
+            href="#"
             className="px-3 py-1 bg-[#8976FD] text-white rounded hover:bg-purple-800"
           >
             Sign Up
@@ -71,7 +68,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center text-center gap-4 p-4 md:hidden z-50">
+        <div className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center text-center gap-4 p-4 md:hidden z-50">
           {links.map((link) => (
             <Link
               key={link.name}
