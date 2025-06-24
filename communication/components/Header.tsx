@@ -81,14 +81,14 @@ const Header = () => {
           ))}
           <div className="flex gap-4">
             <Link
-              href="/login"
+              href="/#"
               className="border-[#8976FD] px-3 py-1 rounded"
               onClick={() => setMenuOpen(false)}
             >
               Login
             </Link>
             <Link
-              href="/signup"
+              href="/#"
               className="bg-[#8976FD] text-white px-3 py-1 rounded"
               onClick={() => setMenuOpen(false)}
             >
